@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankar</title>
+    <link rel="icon" href="../../public/assests/logo.jpg">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            animation-name: opacity;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+        }
+        
+        .navSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #513255;
+            color: #BFC9C2;
+            min-height: 8vh;
+            max-height: 10vh;
+            padding: 0 25px;
+            z-index: 15;
+        }
+        .navSection .profileName {
+            color: #5D635F;
+            filter: brightness(2);
+            /* transition:rotate 1s ease;
+            animation: rotate 3s; */
+            letter-spacing: 4px;
+            text-shadow: 0 2px 3px black,-1px 2px 5px black, -5px 5px 8px black; 
+        }
+        .navSection .navLinks {
+            display: inline-flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+        /* .navLinks .links {
+        } */
+        .navLinks .links a {
+            color: #BFC9C2;
+            text-decoration: none;
+            transition: 1.5s ease-out;
+            font-size: 13px;
+        
+        }
+        .links:active {
+            
+            animation-name: rotate;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+        
+        }
+        .links a:not(:focus){
+            text-decoration: line-through;
+            opacity: 0.1px;
+        }
+        .links a:focus {
+            color: #ffff;
+            /* color: #513255; */
+            filter: contrast(-50);
+            font-size: 17px;
+            text-transform:uppercase;
+            text-shadow: black 1px 5px 8px;
+        
+        }
+        
+        
+        
+        
+        
+        
+        /* sectionSection */
+        
+        
+        .sectionSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* padding: 20px; */
+            background-color: gray;
+            /* height: 92vh; */
+            
+            
+        }
+        .sectionSection .profileCard {
+            height: 350px;
+            width: 250px;
+            /* border-radius: 35px;background-color: aqua; */
+            padding: 12px;
+            border-radius: 18px;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            animation-name: translate;
+            animation-duration: 2.5s;
+            animation-iteration-count: 1;
+           
+        }
+        .profileCard .profileImage {
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+           
+        }
+        
+        /* .profileDetailsCard{
+        
+        } */
+        .profileDetailsCard .profileHeading {
+            color: #513255;
+            filter: contrast(-50);
+            animation-name: translate;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+        }
+        .profileDetailsCard .profileDetails {
+            /* background-color: #BFC9C2; */
+            text-align: left;
+            padding: 15px;
+            width: 40vw;
+            height: 25vh;
+            /* color: #513255; */
+            filter: brightness(-5);
+            animation-name: translate;
+            animation-duration: 3.5s;
+            animation-iteration-count: 1;
+        
+        }
+        
+        
+        /* footerSection */
+        
+        .footerSection {
+            height: 10vh;
+            background-color: #513255;
+        
+        }
+        
+        
+         
+        @media screen and (min-width:480px) and (max-width:710px){
+            /* .navSection {
+                display: block;
+            } */
+            .sectionSection {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+            .sectionSection .profileCard {
+                height: 300px;
+                width: 250px;
+                /* border-radius: 35px;background-color: aqua; */
+                padding: 12px;
+                border-radius: 18px;
+                box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                animation-name: scale;
+                animation-duration: 3s;
+                animation-iteration-count: 1;
+            }
+            .profileCard .profileImage {
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+            }
+            .profileDetailsCard .profileDetails {
+                width: 60vw;
+               
+            }
+            .profileDetailsCard {
+                margin-top: 5%;
+        
+            }
+            
+        }
+        
+        
+        /* Animations */
+        
+        @keyframes rotate {
+            from{
+                transform: rotate(-360deg);
+                font-size: 1px;
+        
+            }
+            to{
+                transform: rotate(340deg);
+        
+            }
+        }
+        
+        @keyframes opacity {
+            from{
+                opacity: 0.5;
+        
+            }
+            to{
+               
+                opacity: 1;
+            }
+        }
+        
+        @keyframes translate {
+            from{
+                /* color: red; */
+                transform: translateX(200px);
+            }
+            to{
+                /* color: orange; */
+                transform: translateX(0px);
+        
+            }
+        }
+        
+        @keyframes scale {
+            from{
+                /* color: red; */
+                transform:scale(3);
+            }
+            to{
+                /* color: orange; */
+                transform:scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav Section -->
+    <header>
+        <nav class="navSection">
+            <h1 class="profileName">Gopu Shankar</h1>
+            <ul class="navLinks">
+                <li class="links">
+                    <a href="#">Home</a>
+                </li>
+                <li class="links">
+                    <a href="#">Photos</a>
+                </li>
+                <li class="links">
+                    <a href="#">About</a>
+                </li>
+                <li class="links">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="sectionSection">
+        <div class="profileCard"> 
+            <img src="../../public/assests/profile.jpg" alt="Profile" class="profileImage">
+        </div>
+        <div class="profileDetailsCard">
+            <h1 class="profileHeading">My Portfolio</h1>
+            <p class="profileDetails">I'm [Your Name], a passionate and innovative website developer with [X] years of experience in crafting beautiful, functional, and user-friendly websites. My journey in web development has been driven by a deep love for technology, a keen eye for design, and an unwavering commitment to creating seamless digital experiences.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footerSection">
+
+    </footer>
+</body>
+</html>

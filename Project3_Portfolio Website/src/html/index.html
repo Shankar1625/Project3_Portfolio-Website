@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shankar</title>
+    <link rel="styleSheet" href="../css/index.css">
+    <link rel="icon" href="../../public/assests/logo.jpg">
+</head>
+<body>
+
+    <!-- Nav Section -->
+    <header>
+        <nav class="navSection">
+            <h1 class="profileName">Gopu Shankar</h1>
+            <ul class="navLinks">
+                <li class="links">
+                    <a href="#Home">Home</a>
+                </li>
+                <li class="links">
+                    <a href="#Photos">Photos</a>
+                </li>
+                <li class="links">
+                    <a href="#About">About</a>
+                </li>
+                <li class="links">
+                    <a href="#Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="sectionSection">
+        <div class="profileCard"> 
+            <img src="../../public/assests/profile.jpg" alt="Profile" class="profileImage">
+        </div>
+        <div class="profileDetailsCard">
+            <h1 class="profileHeading">My Portfolio</h1>
+            <p class="profileDetails">I'm <b class="contactHeading">GOPU SHANKAR</b>, a passionate and innovative website developer with [X] years of experience in crafting beautiful, functional, and user-friendly websites. My journey in web development has been driven by a deep love for technology, a keen eye for design, and an unwavering commitment to creating seamless digital experiences.
+            </p>
+        </div>
+    </section>
+    <h3>Project</h3>
+    <section id="Photos">
+        
+        <strong><b class="contactHeading">Project Highlight:</b><br><br> * E-Commerce Website Development</strong> <br>
+        <p class="projectPara">
+            In one of my most rewarding projects, I developed a comprehensive e-commerce platform for [Client's Name/Brand]. <br>
+            This dynamic website was designed to provide a seamless and engaging shopping experience, featuring a robust catalog of products, secure payment integrations, and a user-friendly interface. <br>
+            Utilizing technologies such as React for the front-end and Node.js for the back-end, I ensured the site was not only visually appealing but also highly functional and scalable. <br>
+            The project also involved integrating various third-party APIs for payment processing and shipping logistics, enhancing the site's overall efficiency. Through meticulous planning, design, and development, the e-commerce platform successfully increased the client's online sales and improved customer satisfaction, demonstrating my ability to deliver impactful and business-driven web solutions.
+        </p>
+
+    </section>
+
+    <section id="About">
+        <h3>About US</h3>
+        <p class="aboutPara">
+            <strong class="contactHeading">Front-End Development: </strong>Crafting responsive, interactive interfaces with HTML, CSS, JavaScript, and frameworks like React. <br>
+            <strong class="contactHeading">Back-End Development: </strong>Building secure, scalable applications using Node.js, Python, PHP, and databases such as MySQL and MongoDB.<br>
+            <strong class="contactHeading">Full-Stack Development: </strong>Delivering complete solutions by combining front-end and back-end skills.<br>
+            <strong class="contactHeading">E-Commerce Solutions:</strong> Creating custom online stores with integrated payment systems and user-friendly experiences.<br>
+            <strong class="contactHeading">Content Management Systems: </strong>Customizing themes and plugins for platforms like WordPress to meet unique business needs.<br><br>
+            My Approach
+            <strong class="contactHeading"> My development process includes:</strong><br><br>
+            <strong class="contactHeading">Discovery: </strong>Understanding client goals and target audience.<br>
+            <strong class="contactHeading">Planning:</strong> Developing a detailed project plan and timeline.<br>
+            <strong class="contactHeading">Design: </strong>Collaborating to create visually appealing, intuitive layouts.<br>
+            <strong class="contactHeading"> Development:</strong> Writing clean, efficient code for performance and scalability.<br>
+            <strong class="contactHeading">Testing:</strong> Ensuring flawless user experience across devices and browsers.<br>
+            <strong class="contactHeading">Launch:</strong> Deploying the website <br>
+        </p><br><br>
+    </section>
+
+    <!-- name,email,number,organization,etc -->
+    <h3>Contact Us </h3>  
+    <section id="Contact">  
+        
+        <form>
+            <label>
+                Name <input type="text" class="name" id="clientName">
+            </label><br><br>
+            <label>
+                Email <input type="email" class="email" id="clientEmail">
+            </label><br><br>
+            <label>
+                Number <input type="text" class="number" id="clientNumber">
+            </label><br><br>
+            <label>
+                Organization <textarea cols="20" rows="1" id="clientOrganization"></textarea>
+            </label><br><br>
+            <input type="submit" value="Submit" id="formContact">
+        </form> 
+        <p id="statusContact"></p>
+    </section> 
+
+        <!-- Contact page of developer -->
+    <footer class="footerSection">
+
+    </footer>
+
+    <script>
+        let formContactEle = document.getElementById("formContact");
+        let statusContactEle = document.getElementById("statusContact");
+        formContactEle.addEventListener("click",()=>{
+            let clientNameEle = document.getElementById("clientName").value;
+            let clientEmailEle = document.getElementById("clientEmail").value;
+            let clientNumberEle = document.getElementById("clientNumber").value;
+            let clientOrganizationEle = document.getElementById("clientOrganization").value;
+            
+            let data = [
+                clientNameEle,
+                clientEmailEle,
+                clientNumberEle,
+                clientOrganizationEle
+            ]
+            
+            localStorage.setItem("data",data);
+            
+            if(data != ''){
+                statusContactEle.innerText = "I will Contact you Shortly \n ThankYou... ";
+                alert("I will Contact you Shortly \n ThankYou...")
+            }else{
+                statusContactEle.innerText = "Enter Correct Details... ";
+                alert("Enter Correct Details... ")
+            }
+
+        }) 
+        console.log(localStorage.getItem("data"))
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
